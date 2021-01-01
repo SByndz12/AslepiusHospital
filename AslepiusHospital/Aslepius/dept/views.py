@@ -14,7 +14,7 @@ def gynaecology(request):
         'object1':obj1,
         'object2':obj2
     }
-    return render(request,'dept/gynaecology1.html',context)
+    return render(request,'dept/Gynaecology1.html',context)
 
 def paediatrics(request):
     obj=Departments.objects.get(doctorID=4)
@@ -27,7 +27,7 @@ def paediatrics(request):
         'object2':obj2,
         'object3':obj3
     }
-    return render(request,'dept/paediatrics1.html',context)
+    return render(request,'dept/Paediatrics1.html',context)
 
 def nephrology(request):
     obj=Departments.objects.get(doctorID=8)
@@ -38,7 +38,7 @@ def nephrology(request):
         'object1':obj1,
         'object2':obj2
     }
-    return render(request,'dept/nephrology1.html',context)
+    return render(request,'dept/Nephrology1.html',context)
 
 def neurology(request):
     obj=Departments.objects.get(doctorID=11)
@@ -49,7 +49,7 @@ def neurology(request):
         'object1':obj1,
         'object2':obj2
     }
-    return render(request,'dept/neurology1.html',context)
+    return render(request,'dept/Neurology1.html',context)
 
 
 def orthopaedics(request):
@@ -61,7 +61,7 @@ def orthopaedics(request):
         'object1':obj1,
         'object2':obj2
     }
-    return render(request,'dept/orthopaedics1.html',context)
+    return render(request,'dept/Orthopaedics1.html',context)
 
 
 def dermatology(request):
@@ -69,7 +69,7 @@ def dermatology(request):
     context={
         'object':obj
     }
-    return render(request,'dept/dermatology1.html',context)
+    return render(request,'dept/Dermatology1.html',context)
 
 def ENT(request):
     obj=Departments.objects.get(doctorID=18)
@@ -100,7 +100,7 @@ def endocrinology(request):
         'object1':obj1,
         'object2':obj2
     }
-    return render(request,'dept/endocrinology1.html',context)
+    return render(request,'dept/Endocrinology1.html',context)
 
 
 def General_Physicians(request):
@@ -140,7 +140,7 @@ def pulmonology(request):
         'object2':obj2,
         'object3': obj3,
     }
-    return render(request,'dept/pulmonology1.html',context)
+    return render(request,'dept/Pulmonology1.html',context)
 
 def psychiatry(request):
     obj=Departments.objects.get(doctorID=38)
@@ -151,7 +151,7 @@ def psychiatry(request):
         'object1':obj1,
         'object2':obj2
     }
-    return render(request,'dept/psychiatry1.html',context)
+    return render(request,'dept/Psychiatry1.html',context)
 
 def opthomology(request):
     obj=Departments.objects.get(doctorID=41)
@@ -162,7 +162,7 @@ def opthomology(request):
         'object1':obj1,
         'object2':obj2
     }
-    return render(request,'dept/opthamology1.html',context)
+    return render(request,'dept/Opthamology1.html',context)
 
 def diet_and_nutrition(request):
     obj=Departments.objects.get(doctorID=44)
@@ -171,5 +171,5 @@ def diet_and_nutrition(request):
         'object':obj,
         'object1':obj1
     }
-    return render(request,'dept/diet_and_nutrition1.html',context)
+    return render(request,'dept/Diet_and_nutrition1.html',context)
 
