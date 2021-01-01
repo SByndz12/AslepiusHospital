@@ -24,7 +24,7 @@ def KidneyPain(request):
     return render(request, 'opening/KidneyPain.html')
 
 def faq(request):
-    return render(request,'faq/faq.html')
+    return render(request,'FAQ/faq.html')
 
 def aboutus(request):
     return render(request,'opening/about.html')
