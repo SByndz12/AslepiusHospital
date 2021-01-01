@@ -25,7 +25,7 @@ SECRET_KEY = 'rx_u1ik2uy-d@7uyzc0!&31d#0)@8*am78kv(scutya0t6z@=j'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['shraddhabyndoor.pythonanywhere.com']
 
 
 # Application definition
@@ -54,7 +54,7 @@ ROOT_URLCONF = 'Aslepius.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['Templates'],
+        'DIRS': ['/home/shraddhabyndoor/AslepiusHospital/AslepiusHospital/Aslepius/Templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -122,6 +122,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_PATH = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = '/home/shraddhabyndoor/AslepiusHospital/AslepiusHospital/Aslepius/static'
 STATICFILES_DIRS = (
     STATIC_PATH,
 )
