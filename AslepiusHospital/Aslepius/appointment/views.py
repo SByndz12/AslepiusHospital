@@ -17,9 +17,9 @@ def bookappointment(request):
         docobj = Departments.objects.get(doctorID = doc_id)
         time_details = models.Availability.objects.get(doctorID = doc_id)
         doc_dict = {'docobject':docobj, 'time': time_details}
-        return render (request, 'appointment/bookapt.html',doc_dict)
+        return render (request, 'Appointment/bookapt.html',doc_dict)
     else:
-        return render (request, 'appointment/bookapt.html')
+        return render (request, 'Appointment/bookapt.html')
 
 '''This function books an appointment with the doctor and also checks 
     if the doctor is available at the specified time'''
@@ -44,9 +44,9 @@ def booknow(request):
             body = 'Dear {0},\nYour appointment with {1} has been confirmed on {2} at {3}\nPlease be on time.\n Regards,\nTeam Aselpius'.format(request.user.first_name, Departments.objects.get(doctorID = docID).docname, date, time)
             send_mail('Appointment Booked', body,
             'aslepius9@gmail.com', [request.user.email,], fail_silently = False)
-            return render(request, 'appointment/appointmentthankyou.html')
+            return render(request, 'Appointment/appointmentthankyou.html')
     else:
-        return render(request, 'appointment/bookapt.html')
+        return render(request, 'Appointment/bookapt.html')
 
 
 '''This function asks you to confirm your cancellation'''
@@ -56,7 +56,7 @@ def confirm(request):
         obj_delete = models.Appointment.objects.filter(aptid = aptid)
         a_dict = {'aptid' : obj_delete}
         print(a_dict)
-    return render(request, 'appointment/confirmcancel.html', a_dict)
+    return render(request, 'Appointment/confirmcancel.html', a_dict)
 
 '''This function enables the patient to cancel the appointment'''        
 def cancel(request):
@@ -65,7 +65,7 @@ def cancel(request):
         obj_delete = models.Appointment.objects.get(aptid = aptid)
         obj_delete.delete()
         print("SUCCESS")
-        return render(request, 'appointment/cancelapt.html')
+        return render(request, 'Appointment/cancelapt.html')
 
 
 '''This function checks if the doctor is available
